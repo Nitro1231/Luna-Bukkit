@@ -1,6 +1,8 @@
 # Luna-Bukkit
 Minecraft Server Bukkit with user-friendly GUI
 
+*Read this in other languages: [English](README.md), [한국어](README.ko.md).*
+
 # License
 <div class="license_icons">
 <img src="https://creativecommons.org/images/chooser/chooser_cc.png">
