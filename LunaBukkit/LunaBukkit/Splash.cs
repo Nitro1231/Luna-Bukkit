@@ -17,11 +17,24 @@ namespace LunaBukkit {
 
         private void Splash_Load(object sender, EventArgs e) {
             Show();
-            while (Opacity < 1) {
+            while (Opacity < 1) { // Fade In
                 Opacity += 0.01;
                 logo.Update();
                 Thread.Sleep(10);
             }
+            
+            // do something
+            Thread.Sleep(1000);
+
+            while (Opacity > 0) { // Fade Out
+                Opacity -= 0.01;
+                logo.Update();
+                Thread.Sleep(10);
+            }
+            Hide();
+
+            Bukkit bukkit = new Bukkit();
+            bukkit.Show();
         }
     }
 }

@@ -46,6 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bukkit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bukkit.Designer.cs">
+      <DependentUpon>Bukkit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\BukkitCore.cs" />
+    <Compile Include="Class\Setting.cs" />
+    <Compile Include="Class\Tool.cs" />
+    <Compile Include="Controls\SideButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SideButton.Designer.cs">
+      <DependentUpon>SideButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +69,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bukkit.resx">
+      <DependentUpon>Bukkit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SideButton.resx">
+      <DependentUpon>SideButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -82,6 +103,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FormControls\" />
+    <Folder Include="Language\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
