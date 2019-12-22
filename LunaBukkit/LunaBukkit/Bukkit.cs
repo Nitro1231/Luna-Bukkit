@@ -17,5 +17,9 @@ namespace LunaBukkit {
         private void Bukkit_Load(object sender, EventArgs e) {
 
         }
+
+        private void Bukkit_MouseMove(object sender, MouseEventArgs e) {
+            Class.Utils.mouseMove(Handle);
+        }
     }
 }

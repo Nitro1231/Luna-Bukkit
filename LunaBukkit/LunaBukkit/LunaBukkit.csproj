@@ -54,7 +54,7 @@
     </Compile>
     <Compile Include="Class\BukkitCore.cs" />
     <Compile Include="Class\Setting.cs" />
-    <Compile Include="Class\Tool.cs" />
+    <Compile Include="Class\Utils.cs" />
     <Compile Include="Controls\SideButton.cs">
       <SubType>UserControl</SubType>
     </Compile>

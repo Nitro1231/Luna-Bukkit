@@ -1,4 +1,6 @@
-﻿namespace LunaBukkit {
+﻿using System.Windows.Forms;
+
+namespace LunaBukkit {
     partial class Bukkit {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +30,10 @@
             this.colorPanel = new System.Windows.Forms.Panel();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.LOGO = new System.Windows.Forms.PictureBox();
             this.sidePanel.SuspendLayout();
+            this.logoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -63,6 +68,7 @@
             // logoPanel
             // 
             this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(203)))), ((int)(((byte)(196)))));
+            this.logoPanel.Controls.Add(this.LOGO);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
             this.logoPanel.Name = "logoPanel";
@@ -76,6 +82,16 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(820, 530);
             this.mainPanel.TabIndex = 1;
+            this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bukkit_MouseMove);
+            // 
+            // LOGO
+            // 
+            this.LOGO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LOGO.Location = new System.Drawing.Point(0, 0);
+            this.LOGO.Name = "LOGO";
+            this.LOGO.Size = new System.Drawing.Size(80, 80);
+            this.LOGO.TabIndex = 0;
+            this.LOGO.TabStop = false;
             // 
             // Bukkit
             // 
@@ -94,6 +110,8 @@
             this.TransparencyKey = System.Drawing.Color.Green;
             this.Load += new System.EventHandler(this.Bukkit_Load);
             this.sidePanel.ResumeLayout(false);
+            this.logoPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,5 +123,6 @@
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.FlowLayoutPanel sideFlowLayoutPanel;
         private System.Windows.Forms.Panel mainPanel;
+        private PictureBox LOGO;
     }
 }
