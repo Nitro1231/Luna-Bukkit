@@ -10,14 +10,20 @@ namespace LunaBukkit.Class {
         public static string javaPath;
         public static string version = "V0.0.1";
         public static int buildNumber = 1;
-        public static string lastUpdated = "12/2/2019";
+        public static string lastUpdate = "12/2/2019";
 
-        #region DarkTheme
+        #region Theme
+        public static Color backColor = Color.FromArgb(35, 35, 35),
+            brightBackColor = Color.FromArgb(40, 40, 40),
+            darkBackColor = Color.FromArgb(28, 28, 28),
+            hoverBackColor = Color.FromArgb(48, 48, 48),
+            selectedBackColor = Color.FromArgb(60, 60, 60);
+        public static Color fontColor = Color.White;
         public static Color themeColor = Color.FromArgb(18, 203, 196); // Main theme color
-        public static Color selectedBackColor = Color.FromArgb(50, 50, 50);
-        public static Color brightBackColor = Color.FromArgb(40, 40, 40);
-        public static Color backColor = Color.FromArgb(30, 30, 30);
-        public static Color darkBackColor = Color.FromArgb(20, 20, 20);
+
+        public static void themeSetting() {
+
+        }
         #endregion
     }
 }

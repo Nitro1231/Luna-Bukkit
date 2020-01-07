@@ -29,11 +29,18 @@ namespace LunaBukkit {
             this.sideFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.colorPanel = new System.Windows.Forms.Panel();
             this.logoPanel = new System.Windows.Forms.Panel();
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.LOGO = new System.Windows.Forms.PictureBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.minBox = new System.Windows.Forms.PictureBox();
+            this.closeBox = new System.Windows.Forms.PictureBox();
             this.sidePanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOGO)).BeginInit();
+            this.mainPanel.SuspendLayout();
+            this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -50,6 +57,7 @@ namespace LunaBukkit {
             // 
             // sideFlowLayoutPanel
             // 
+            this.sideFlowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.sideFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideFlowLayoutPanel.Location = new System.Drawing.Point(0, 80);
             this.sideFlowLayoutPanel.Name = "sideFlowLayoutPanel";
@@ -64,6 +72,7 @@ namespace LunaBukkit {
             this.colorPanel.Name = "colorPanel";
             this.colorPanel.Size = new System.Drawing.Size(80, 5);
             this.colorPanel.TabIndex = 1;
+            this.colorPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bukkit_MouseMove);
             // 
             // logoPanel
             // 
@@ -75,15 +84,6 @@ namespace LunaBukkit {
             this.logoPanel.Size = new System.Drawing.Size(80, 80);
             this.logoPanel.TabIndex = 0;
             // 
-            // mainPanel
-            // 
-            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.mainPanel.Location = new System.Drawing.Point(80, 10);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(820, 530);
-            this.mainPanel.TabIndex = 1;
-            this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bukkit_MouseMove);
-            // 
             // LOGO
             // 
             this.LOGO.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,6 +92,45 @@ namespace LunaBukkit {
             this.LOGO.Size = new System.Drawing.Size(80, 80);
             this.LOGO.TabIndex = 0;
             this.LOGO.TabStop = false;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.mainPanel.Controls.Add(this.topPanel);
+            this.mainPanel.Location = new System.Drawing.Point(80, 10);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(820, 530);
+            this.mainPanel.TabIndex = 1;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bukkit_MouseMove);
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.minBox);
+            this.topPanel.Controls.Add(this.closeBox);
+            this.topPanel.Location = new System.Drawing.Point(20, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(800, 24);
+            this.topPanel.TabIndex = 0;
+            // 
+            // minBox
+            // 
+            this.minBox.Location = new System.Drawing.Point(753, 2);
+            this.minBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.minBox.Name = "minBox";
+            this.minBox.Size = new System.Drawing.Size(20, 20);
+            this.minBox.TabIndex = 1;
+            this.minBox.TabStop = false;
+            this.minBox.Click += new System.EventHandler(this.minBox_Click);
+            // 
+            // closeBox
+            // 
+            this.closeBox.Location = new System.Drawing.Point(777, 2);
+            this.closeBox.Name = "closeBox";
+            this.closeBox.Size = new System.Drawing.Size(20, 20);
+            this.closeBox.TabIndex = 2;
+            this.closeBox.TabStop = false;
+            this.closeBox.Click += new System.EventHandler(this.closeBox_Click);
             // 
             // Bukkit
             // 
@@ -109,9 +148,14 @@ namespace LunaBukkit {
             this.Text = "Luna Bukkit";
             this.TransparencyKey = System.Drawing.Color.Green;
             this.Load += new System.EventHandler(this.Bukkit_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Bukkit_Paint);
             this.sidePanel.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LOGO)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.minBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +168,8 @@ namespace LunaBukkit {
         private System.Windows.Forms.FlowLayoutPanel sideFlowLayoutPanel;
         private System.Windows.Forms.Panel mainPanel;
         private PictureBox LOGO;
+        private Panel topPanel;
+        private PictureBox minBox;
+        private PictureBox closeBox;
     }
 }

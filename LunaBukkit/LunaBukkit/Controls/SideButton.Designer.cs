@@ -34,6 +34,10 @@
             this.selectPanel.Name = "selectPanel";
             this.selectPanel.Size = new System.Drawing.Size(8, 50);
             this.selectPanel.TabIndex = 0;
+            this.selectPanel.Click += new System.EventHandler(this.SideButton_Click);
+            this.selectPanel.MouseLeave += new System.EventHandler(this.SideButton_MouseLeave);
+            this.selectPanel.MouseHover += new System.EventHandler(this.SideButton_MouseHover);
+            this.selectPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SideButton_MouseMove);
             // 
             // menuPictureBox
             // 
@@ -42,6 +46,9 @@
             this.menuPictureBox.Size = new System.Drawing.Size(50, 50);
             this.menuPictureBox.TabIndex = 1;
             this.menuPictureBox.TabStop = false;
+            this.menuPictureBox.Click += new System.EventHandler(this.SideButton_Click);
+            this.menuPictureBox.MouseHover += new System.EventHandler(this.SideButton_MouseHover);
+            this.menuPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SideButton_MouseMove);
             // 
             // SideButton
             // 
@@ -52,9 +59,13 @@
             this.Controls.Add(this.selectPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.Name = "SideButton";
             this.Size = new System.Drawing.Size(80, 60);
+            this.Click += new System.EventHandler(this.SideButton_Click);
+            this.MouseLeave += new System.EventHandler(this.SideButton_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.SideButton_MouseHover);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SideButton_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.menuPictureBox)).EndInit();
             this.ResumeLayout(false);
 

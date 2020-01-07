@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
 namespace LunaBukkit {
     public partial class Splash : Form {
+        public static Bukkit bukkit;
+
         public Splash() {
             InitializeComponent();
         }
@@ -22,8 +17,9 @@ namespace LunaBukkit {
                 logo.Update();
                 Thread.Sleep(10);
             }
-            
+
             // do something
+            bukkit = new Bukkit();
             Thread.Sleep(1000);
 
             while (Opacity > 0) { // Fade Out
@@ -32,8 +28,6 @@ namespace LunaBukkit {
                 Thread.Sleep(10);
             }
             Hide();
-
-            Bukkit bukkit = new Bukkit();
             bukkit.Show();
         }
     }
