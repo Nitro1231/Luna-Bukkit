@@ -21,7 +21,11 @@ namespace LunaBukkit.Class {
         public static Color fontColor = Color.White;
         public static Color themeColor = Color.FromArgb(18, 203, 196); // Main theme color
 
-        public static void themeSetting() {
+        public static void loadThemeSetting() {
+
+        }
+
+        public static void saveThemeSetting() {
 
         }
         #endregion

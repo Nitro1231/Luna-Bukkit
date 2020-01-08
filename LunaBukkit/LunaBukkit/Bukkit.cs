@@ -36,6 +36,8 @@ namespace LunaBukkit {
             sideFlowLayoutPanel.Controls.Add(server);
             sideFlowLayoutPanel.Controls.Add(newServer);
             sideFlowLayoutPanel.Controls.Add(setting);
+
+            circleProgressBar1.value = 100;
         }
 
         private void Bukkit_Load(object sender, EventArgs e) {
@@ -83,7 +85,7 @@ namespace LunaBukkit {
             WindowState = FormWindowState.Minimized; // Minimized button
         }
         private void closeBox_Click(object sender, EventArgs e) {
-            Close(); // Close button 
+            Application.Exit(); // Close button 
         }
     }
 }

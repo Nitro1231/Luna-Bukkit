@@ -15,9 +15,12 @@ namespace LunaBukkit.Class {
                         return "";
                 }
             } else if (Directory.Exists(@"C:\Program Files (x86)\Java")) {
-                foreach (string path in Directory.GetDirectories("C:\\Program Files (x86)\\Java")) {
-
+                foreach (string path in Directory.GetDirectories(@"C:\Program Files (x86)\Java")) {
+                    if (File.Exists(path + @""))
+                        return "";
                 }
+            } else {
+                //Java DNE
             }
             return "dne";
         }

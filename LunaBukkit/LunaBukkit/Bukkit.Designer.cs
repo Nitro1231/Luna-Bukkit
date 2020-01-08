@@ -34,6 +34,7 @@ namespace LunaBukkit {
             this.topPanel = new System.Windows.Forms.Panel();
             this.minBox = new System.Windows.Forms.PictureBox();
             this.closeBox = new System.Windows.Forms.PictureBox();
+            this.circleProgressBar1 = new LunaBukkit.Controls.CircleProgressBar();
             this.sidePanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOGO)).BeginInit();
@@ -63,6 +64,7 @@ namespace LunaBukkit {
             this.sideFlowLayoutPanel.Name = "sideFlowLayoutPanel";
             this.sideFlowLayoutPanel.Size = new System.Drawing.Size(80, 465);
             this.sideFlowLayoutPanel.TabIndex = 2;
+            this.sideFlowLayoutPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bukkit_MouseMove);
             // 
             // colorPanel
             // 
@@ -92,10 +94,12 @@ namespace LunaBukkit {
             this.LOGO.Size = new System.Drawing.Size(80, 80);
             this.LOGO.TabIndex = 0;
             this.LOGO.TabStop = false;
+            this.LOGO.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bukkit_MouseMove);
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.mainPanel.Controls.Add(this.circleProgressBar1);
             this.mainPanel.Controls.Add(this.topPanel);
             this.mainPanel.Location = new System.Drawing.Point(80, 10);
             this.mainPanel.Name = "mainPanel";
@@ -112,6 +116,7 @@ namespace LunaBukkit {
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(800, 24);
             this.topPanel.TabIndex = 0;
+            this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Bukkit_MouseMove);
             // 
             // minBox
             // 
@@ -131,6 +136,13 @@ namespace LunaBukkit {
             this.closeBox.TabIndex = 2;
             this.closeBox.TabStop = false;
             this.closeBox.Click += new System.EventHandler(this.closeBox_Click);
+            // 
+            // circleProgressBar1
+            // 
+            this.circleProgressBar1.Location = new System.Drawing.Point(69, 55);
+            this.circleProgressBar1.Name = "circleProgressBar1";
+            this.circleProgressBar1.Size = new System.Drawing.Size(150, 150);
+            this.circleProgressBar1.TabIndex = 1;
             // 
             // Bukkit
             // 
@@ -171,5 +183,6 @@ namespace LunaBukkit {
         private Panel topPanel;
         private PictureBox minBox;
         private PictureBox closeBox;
+        private Controls.CircleProgressBar circleProgressBar1;
     }
 }

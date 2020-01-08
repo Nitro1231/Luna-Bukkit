@@ -50,6 +50,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Splash";
             this.Opacity = 0D;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash";
             this.TransparencyKey = System.Drawing.Color.Black;
