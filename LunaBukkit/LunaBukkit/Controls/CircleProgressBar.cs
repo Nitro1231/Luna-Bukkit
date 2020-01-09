@@ -18,7 +18,7 @@ namespace LunaBukkit.Controls {
             draw(e.Graphics, value);
         }
 
-        private void draw(Graphics g, float percent) {
+        private void draw(Graphics g, int percent) {
             Color c;
             if (percent <= 50)
                 c = Color.FromArgb(46, 204, 113);
@@ -27,16 +27,14 @@ namespace LunaBukkit.Controls {
             else
                 c = Color.FromArgb(231, 76, 60);
 
-            float calculatedAngle = 360 / 100 * percent;
-            float remainderAngle = 360 - calculatedAngle;
-
+            int calculatedAngle = 36 * percent;
             Pen calculatedPen = new Pen(c, colorThickness);
             Pen remainderPen = new Pen(Class.Setting.darkBackColor, insideThickness);
-            Rectangle rect = new Rectangle(5, 5, Width - 5, Height - 5);
+            Rectangle rect = new Rectangle(5, 5, Width - 10, Height - 10);
 
             g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.DrawArc(remainderPen, rect, 0, 360);
             g.DrawArc(calculatedPen, rect, -90, calculatedAngle);
-            g.DrawArc(remainderPen, rect, calculatedAngle - 90, remainderAngle);
 
             Font ft = new Font(Font.FontFamily, 14);
             string text = percent.ToString() + "%";

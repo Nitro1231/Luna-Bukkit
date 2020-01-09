@@ -34,7 +34,6 @@ namespace LunaBukkit {
             this.topPanel = new System.Windows.Forms.Panel();
             this.minBox = new System.Windows.Forms.PictureBox();
             this.closeBox = new System.Windows.Forms.PictureBox();
-            this.circleProgressBar1 = new LunaBukkit.Controls.CircleProgressBar();
             this.sidePanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LOGO)).BeginInit();
@@ -99,7 +98,6 @@ namespace LunaBukkit {
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.mainPanel.Controls.Add(this.circleProgressBar1);
             this.mainPanel.Controls.Add(this.topPanel);
             this.mainPanel.Location = new System.Drawing.Point(80, 10);
             this.mainPanel.Name = "mainPanel";
@@ -137,16 +135,9 @@ namespace LunaBukkit {
             this.closeBox.TabStop = false;
             this.closeBox.Click += new System.EventHandler(this.closeBox_Click);
             // 
-            // circleProgressBar1
-            // 
-            this.circleProgressBar1.Location = new System.Drawing.Point(69, 55);
-            this.circleProgressBar1.Name = "circleProgressBar1";
-            this.circleProgressBar1.Size = new System.Drawing.Size(150, 150);
-            this.circleProgressBar1.TabIndex = 1;
-            // 
             // Bukkit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(900, 550);
@@ -183,6 +174,5 @@ namespace LunaBukkit {
         private Panel topPanel;
         private PictureBox minBox;
         private PictureBox closeBox;
-        private Controls.CircleProgressBar circleProgressBar1;
     }
 }
