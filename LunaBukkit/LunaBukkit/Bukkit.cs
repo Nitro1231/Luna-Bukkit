@@ -11,7 +11,8 @@ using System.Windows.Forms;
 
 namespace LunaBukkit {
     public partial class Bukkit : Form {
-        private Controls.SideButton dashboard, server, newServer, setting;
+        private Controls.SideButton dashboardSideButton, serverSideButton, newServerSideButton, settingSideButton;
+        private FormControls.Dashboard dashboardTab = new FormControls.Dashboard();
 
         public Bukkit() {
             InitializeComponent();
@@ -24,18 +25,22 @@ namespace LunaBukkit {
             mainPanel.BackColor = Class.Setting.backColor;
             #endregion
 
+            titleText.Text = Class.Language.titleText;
+
             // Setup the side buttons
-            dashboard = new Controls.SideButton(0, true, null);
-            server = new Controls.SideButton(1, false, null);
-            newServer = new Controls.SideButton(2, false, null);
-            setting = new Controls.SideButton(3, false, null);
-            setting.Margin = new Padding(0, 175, 0, 0);
+            dashboardSideButton = new Controls.SideButton(0, true, null);
+            serverSideButton = new Controls.SideButton(1, false, null);
+            newServerSideButton = new Controls.SideButton(2, false, null);
+            settingSideButton = new Controls.SideButton(3, false, null);
+            settingSideButton.Margin = new Padding(0, 175, 0, 0);
 
             // Add controls to the layout panel
-            sideFlowLayoutPanel.Controls.Add(dashboard);
-            sideFlowLayoutPanel.Controls.Add(server);
-            sideFlowLayoutPanel.Controls.Add(newServer);
-            sideFlowLayoutPanel.Controls.Add(setting);
+            sideFlowLayoutPanel.Controls.Add(dashboardSideButton);
+            sideFlowLayoutPanel.Controls.Add(serverSideButton);
+            sideFlowLayoutPanel.Controls.Add(newServerSideButton);
+            sideFlowLayoutPanel.Controls.Add(settingSideButton);
+
+            mainLayoutPanel.Controls.Add(dashboardTab);
         }
 
         private void Bukkit_Load(object sender, EventArgs e) {

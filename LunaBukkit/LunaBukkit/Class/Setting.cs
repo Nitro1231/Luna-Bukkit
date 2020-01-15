@@ -12,6 +12,8 @@ namespace LunaBukkit.Class {
         public static int buildNumber = 1;
         public static string lastUpdate = "12/2/2019";
 
+        public static int dashboardTick = 1000;
+
         #region Theme
         public static Color backColor = Color.FromArgb(35, 35, 35),
             brightBackColor = Color.FromArgb(40, 40, 40),

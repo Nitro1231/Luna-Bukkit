@@ -1,0 +1,14 @@
+﻿{
+  "Version": 1,
+  "Main": {
+    "titleText": "Luna Bukkit"
+  },
+  "Dashboard": {
+    "dashboardTitle": "Dashboard",
+    "tTimeText": "20 seconds",
+    "sysChartText": "CPU / RAM usage",
+    "pcUserNameText": "User Name: ",
+    "pcBitText": "Process Bitness: ",
+    "pcCPUName": "CPU Name: "
+  }
+}
