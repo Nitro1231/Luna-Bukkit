@@ -19,6 +19,10 @@ namespace LunaBukkit {
             }
 
             // do something
+            Class.Setting.loadSetting();
+            //Class.Setting.loadThemeSetting();
+            //Class.Language.readLang("en");
+
             bukkit = new Bukkit();
             Thread.Sleep(1000);
 
