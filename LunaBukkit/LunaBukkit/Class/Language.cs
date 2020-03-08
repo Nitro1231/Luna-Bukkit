@@ -26,7 +26,7 @@ namespace LunaBukkit.Class {
 
         public static void readLang(string lang) {
             try {
-                Resources langFile;
+                byte[] langFile;
                 switch (lang) {
                     case "en":
                         langFile = Resources.en;

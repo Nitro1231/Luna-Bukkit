@@ -29,9 +29,11 @@ namespace LunaBukkit.Class {
                 MessageBox.Show(e.ToString());
             }
         }
-        public static void checkDirectory(string path) {
-            if (!Directory.Exists(path))
+        public static bool checkDirectory(string path) {
+            bool check = Directory.Exists(path);
+            if (!check)
                 Directory.CreateDirectory(path);
+            return check;
         }
         #endregion
 
